@@ -1,18 +1,17 @@
-<h1>Главный дашборд</h1>
-<script type="text/javascript">
-	var context = function(c){
-		document.getElementById('context').innerHTML = c;
-	}
-
-	window.addEventListener('message', function(event){
-		context(event.data.context);
-	});
-
-	function loaded() {
-		context('loaded');
-	}
-
-	document.addEventListener('DOMContentLoaded', loaded)
-</script>
-<p id="context"></p>
-<iframe src="page1.html"></iframe>
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script>
+			setTimeout('WebViewBridge.send("main")', 40)
+		</script>
+	</head>
+	<body>
+		<div style="width:600px; height:600px; text-align:center; margin-top:50px">
+			<h1>Main Dashboard</h1>
+			<a href="page1.html">to page 1</a><br><br>
+			<a href="page2.html">to page 2</a><br><br>
+			<a href="page3.html">to page 3</a>
+		</div>
+	</body>
+</html>

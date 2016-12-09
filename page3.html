@@ -1,4 +1,15 @@
-<h1>Страница третья</h1>
-<script type="text/javascript">
-	parent.postMessage({context: 'page3'}, '*')
-</script>
+<!DOCTYPE HTML>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+			setTimeout('WebViewBridge.send("page3")', 40)
+		</script>
+	</head>
+	<body>
+		<div style="width:600px; height:600px; text-align:center; margin-top:50px">
+			<h1>Third page</h1><br><br>
+			<a href="main.html">to main dashboard</a><br>
+		</div>
+	</body>
+</html>
