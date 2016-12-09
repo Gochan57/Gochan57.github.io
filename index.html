@@ -7,6 +7,12 @@
 	window.addEventListener('message', function(event){
 		context(event.data.context);
 	});
+
+	function loaded() {
+		context('loaded');
+	}
+
+	document.addEventListener('DOMContentLoaded', loaded)
 </script>
 <p id="context"></p>
 <iframe src="page1.html"></iframe>
