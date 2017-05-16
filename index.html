@@ -3,7 +3,13 @@
 	<head>
 		<meta charset="UTF-8">
 		<script>
-			setTimeout('WebViewBridge.send("main")', 40)
+			// setTimeout('WebViewBridge.send("main")', 40)
+			function _onfocus(e) {
+				console.log('event:', e)
+				e.preventDefault();
+				e.stopPropagation();
+				e.stopPropagation();
+			}
 		</script>
 	</head>
 	<body>
@@ -13,6 +19,6 @@
 			<a href="page2.html">to page 2</a><br><br>
 			<a href="page3.html">to page 3</a>
 		</div>
-		<span>сообщение:  </span><input type='text' size='40'/>
+		<span>сообщение:  </span><input type='text' size='40' onfocus="_onfocus(event)"/>
 	</body>
 </html>
