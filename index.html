@@ -5,10 +5,7 @@
 		<script>
 			// setTimeout('WebViewBridge.send("main")', 40)
 			function _onfocus(e) {
-				console.log('event:', e)
-				e.preventDefault();
-				e.stopPropagation();
-				e.stopPropagation();
+				window.postMessage('HELLO!')
 			}
 		</script>
 	</head>
