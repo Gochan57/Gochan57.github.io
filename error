@@ -1,4 +1,4 @@
 {
-  success: false,
-  error: 'Тестовая ошибка GitHub'
+  'success': false,
+  'error': 'Тестовая ошибка GitHub'
 }
